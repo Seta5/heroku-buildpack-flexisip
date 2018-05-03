@@ -1,5 +1,4 @@
-#!/usr/bin/env
-# bin/detect <build-dir>
+#!/bin/bash
 
 if [ -f $1/prepare.py ]; then
    echo "------> prepare.py found"
