@@ -4,11 +4,6 @@
 BUILD_DIR=$1
 CACHE_DIR=$2
 
-if [ -f prepare.py ]; then
-  echo "-----> Configuring"
-  ./prepare.py flexisip
-fi
-
 # make
-echo "------> Compiling with Make"
-make -C $BUILD_DIR/WORK/flexisip/cmake
+echo "-----> Compiling with Make"
+make
