@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
 if [ -f $1/prepare.py ]; then
-   echo "------> prepare.py found"
+   echo "Flexisip"
    exit 0
 else
-   echo "------> prepare.py not found"
    exit 1
 fi
