@@ -6,4 +6,4 @@ CACHE_DIR=$2
 
 # make
 echo "-----> Compiling with Make"
-make
+make -C /home/ingelabs/flexisip/WORK/flexisip/cmake
