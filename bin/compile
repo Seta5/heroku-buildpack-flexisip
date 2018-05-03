@@ -2,7 +2,6 @@
 # bin/compile <build-dir> <cache-dir>
 
 if [ -f prepare.py ]; then
-  echo "------> prepare.py found"
   echo "------> Configuring"
   ./prepare.py flexisip
 fi
