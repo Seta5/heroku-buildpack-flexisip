@@ -2,6 +2,7 @@
 # bin/compile <build-dir> <cache-dir>
 
 BUILD_DIR=$1
+cd $BUILD_DIR
 
 if [ -f $1/prepare.py ]; then
   echo "-----> Configuring"
