@@ -7,6 +7,8 @@ set -o pipefail
 BUILD_DIR=$1
 CACHE_DIR=$2
 
+ls
+ls $0
 cd vendor/cmake
 ./configure
 sudo make install
