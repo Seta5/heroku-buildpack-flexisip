@@ -12,8 +12,11 @@ cd vendor
 wget https://cmake.org/files/v3.11/cmake-3.11.1.tar.gz
 tar -xvf cmake-3.11.1.tar.gz
 cd cmake-3.11.1
-./configure
-sudo make install
+./bootstrap
+export PATH=$PATH:$(pwd)/bin
+echo $PATH
+mkdir /app
+ls /
 
 cd $BUILD_DIR
 
