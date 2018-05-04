@@ -9,6 +9,10 @@ CACHE_DIR=$2
 
 cd $BUILD_DIR
 
+ls vendor/cmake
+export PATH=$PATH:vendor/cmake/bin
+echo $PATH
+
 # configure
 #if [ -f $1/prepare.py ]; then
 #  echo "-----> Configuring"
