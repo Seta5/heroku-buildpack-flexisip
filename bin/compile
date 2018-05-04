@@ -1,14 +1,18 @@
 #!/usr/bin/env bash
 # bin/compile <build-dir> <cache-dir>
 
+set -e
+set -o pipefail
+
 BUILD_DIR=$1
+CACHE_DIR=$2
+
 cd $BUILD_DIR
 
+# configure
 if [ -f $1/prepare.py ]; then
   echo "-----> Configuring"
   ./prepare.py
-else
-  exit 0
 fi
 
 # make
