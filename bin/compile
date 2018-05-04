@@ -14,7 +14,7 @@ CACHE_DIR=$2
 #cd cmake-3.11.1
 ls $0
 echo $(pwd)
-echo %(dirname $0)
+echo $(dirname $0)
 #./bootstrap --prefix $0
 #make 
 
