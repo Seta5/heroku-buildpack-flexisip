@@ -8,6 +8,11 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 
 cd $BUILD_DIR
+ls /usr/local/bin
+echo $PATH
+echo $(dirname $0)
+ls /sbin
+ls /bin
 
 # dependencies
 #while read url; do
