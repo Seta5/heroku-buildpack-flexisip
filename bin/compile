@@ -7,16 +7,16 @@ set -o pipefail
 BUILD_DIR=$1
 CACHE_DIR=$2
 
-mkdir vendor
-cd vendor
-wget https://cmake.org/files/v3.11/cmake-3.11.1.tar.gz
-tar -xvf cmake-3.11.1.tar.gz
-cd cmake-3.11.1
-./bootstrap
-export PATH=$PATH:$(pwd)/bin
-echo $PATH
-mkdir /app
-ls /
+#mkdir vendor
+#cd vendor
+#wget https://cmake.org/files/v3.11/cmake-3.11.1.tar.gz
+#tar -xvf cmake-3.11.1.tar.gz
+#cd cmake-3.11.1
+ls $0
+echo $(pwd)
+echo %(dirname $0)
+#./bootstrap --prefix $0
+#make 
 
 cd $BUILD_DIR
 
