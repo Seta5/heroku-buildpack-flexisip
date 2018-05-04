@@ -9,9 +9,9 @@ CACHE_DIR=$2
 
 cd $BUILD_DIR
 
-ls vendor/cmake
-export PATH=$PATH:vendor/cmake/bin
-echo $PATH
+ls vendor/cmake/cmake-3.9.1
+export PATH=$PATH:vendor/cmake/cmake-3.9.1/bin
+sudo cp vendor/cmake/cmake-3.9.1/bin/cmake /usr/local/bin/cmake
 
 # configure
 #if [ -f $1/prepare.py ]; then
