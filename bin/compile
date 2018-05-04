@@ -8,23 +8,23 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 
 cd $BUILD_DIR
-ls /usr/local/bin
-echo $PATH
-echo $(dirname $0)
-ls /sbin
-ls /bin
+ls $(dirname $0)
 
 # dependencies
-#while read url; do
-#  echo Vendoring $url
-#  curl -s $url | tar xz
-#done < vendor_urls
+while read url; do
+  echo Vendoring $url
+  curl -s $url | tar xz
+done < vendor_urls
+
+ls $(dirname $0)
+export PATH=$PATH:$BUILD_DIR/*/bin
+echo $PATH
 
 # configure
-#if [ -f $1/prepare.py ]; then
-#  echo "-----> Configuring"
-#  ./prepare.py
-#fi
+if [ -f $1/prepare.py ]; then
+  echo "-----> Configuring"
+  ./prepare.py
+fi
 
 # make
 echo "-----> Compiling with Make"
