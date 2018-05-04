@@ -12,8 +12,8 @@ CACHE_DIR=$2
 #wget https://cmake.org/files/v3.11/cmake-3.11.1.tar.gz
 #tar -xvf cmake-3.11.1.tar.gz
 #cd cmake-3.11.1
+mkdir /tmp/codon/vendor/bin/cmake
 ls /tmp/codon/vendor/bin
-mkdir /usr/local/bin/cmake
 #./bootstrap --prefix $0
 #make 
 
