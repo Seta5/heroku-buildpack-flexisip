@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 # bin/compile <build-dir> <cache-dir>
 
-if [ -f $1/prepare.py ]; then
-  echo "----->Configuring"
-  ./prepare.py
-fi
+BUILD_DIR=$1
 
-BUILD_DIR=$(cd $1; cd WORK/flexisip/cmake; pwd)
+if [ -f $1/prepare.py ]; then
+  echo "-----> Configuring"
+  ./prepare.py
+else
+  exit 0
+fi
 
 # make
 echo "-----> Compiling with Make"
-make -C $BUILD_DIR
+make
