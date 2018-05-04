@@ -11,17 +11,16 @@ cd $BUILD_DIR
 ls
 
 # dependencies
-while read url; do
-  echo Vendoring $url
-  curl -s $url | tar xz
-done < .vendor_urls
-ls
+#while read url; do
+#  echo Vendoring $url
+#  curl -s $url | tar xz
+#done < vendor_urls
 
 # configure
-if [ -f $1/prepare.py ]; then
-  echo "-----> Configuring"
-  ./prepare.py
-fi
+#if [ -f $1/prepare.py ]; then
+#  echo "-----> Configuring"
+#  ./prepare.py
+#fi
 
 # make
 echo "-----> Compiling with Make"
