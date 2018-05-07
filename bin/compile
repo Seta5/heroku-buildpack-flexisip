@@ -14,14 +14,14 @@ cd cmake-3.11.1
 ./bootstrap --prefix=/tmp/codon/vendor
 make 
 make install
-ls /tmp/codon/vendor/bin
 
 cd $BUILD_DIR
 
 # configure
 if [ -f $1/prepare.py ]; then
   echo "-----> Configuring"
-  ./prepare.py
+  ./prepare.py -c
+  ./prepare.py -DCMAKE_PREFIX_PATH=/tmp/codon/vendor
 fi
 
 # make
