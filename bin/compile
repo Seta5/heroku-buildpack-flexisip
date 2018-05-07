@@ -7,10 +7,11 @@ set -o pipefail
 BUILD_DIR=$1
 CACHE_DIR=$2
 
+# Installing cmake
 wget https://cmake.org/files/v3.11/cmake-3.11.1.tar.gz
 tar -xvf cmake-3.11.1.tar.gz
 cd cmake-3.11.1
-./bootstrap --prefix=/tmp/codon/vendor/bin
+./bootstrap --prefix=/tmp/codon/vendor
 make 
 make install
 ls /tmp/codon/vendor/bin
@@ -18,10 +19,10 @@ ls /tmp/codon/vendor/bin
 cd $BUILD_DIR
 
 # configure
-#if [ -f $1/prepare.py ]; then
-#  echo "-----> Configuring"
-#  ./prepare.py
-#fi
+if [ -f $1/prepare.py ]; then
+  echo "-----> Configuring"
+  ./prepare.py
+fi
 
 # make
 echo "-----> Compiling with Make"
